@@ -1,0 +1,141 @@
+$styles : header;
+.#{$styles} {
+@include flex (space-between, center, row);
+width: 100%;
+border-bottom: 1px solid $color_border_nav;
+padding-right: 20px;
+padding-left: 20px;
+
+&__nav-wrapper {
+    @include flex (space-between, space-around, row);
+}
+&__nav__list {
+    @include flex (center, center, row);
+}
+&__nav__list__item {
+    margin-right: 30px;
+}
+&__nav__list__item:last-child {
+    margin-right: 0px;
+}
+&__nav__list__item__link:hover {
+    color: $color_hover_nav;
+}
+&__nav__list__item__link {
+    @include text($H100, 400, $text_color_white);
+    transition: all .8s;
+}
+&__bar{
+    @include flex (center, center, row);
+    border-left: 1px solid $color_border_nav;
+}
+&__bar__item{
+    padding: 20px 30px 20px 30px;
+    border-right: 1px solid $color_border_nav;
+
+}
+&__bar__item:last-child{
+    padding-right: 0px;
+    border-right: 1px solid transparent;
+}
+&__bar__item:hover{
+    cursor: pointer;
+}
+&__bar__item__icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 11px;
+}
+&__bar__item__link {
+    @include text($H100, 400, $text_color_white);
+ transition: all .8s;
+}
+&__bar__item__link:hover{
+    color: $color_hover_nav; 
+}
+&__logo {
+    @include text($H550, 700, $text_color_white);
+}
+&__input {
+    position: absolute;
+    top: 70px;
+    left: 75%;
+    padding: 10px;
+    background-color: transparent;
+    border-color: $color_border_nav;
+    display: none;
+}
+}
+
+
+$styles : main-screen;
+.#{$styles} {
+    background: url('../img/header/bg.jpg');
+    @include bg;
+    padding-bottom: 63px;
+    min-height: 100vh;
+    @include flex (center, flex-end, column);
+
+&__text-wrapper {
+    @include flex (center, center, row);
+    padding-top: 312px;
+    padding-bottom: 255px;
+}
+&____main-text-wrap {
+    @include flex (center, center, column);
+}
+&__arrow-wrapper{
+    position: relative;
+width: 100%;
+display: flex;
+justify-content: center;
+}
+&__vertikal_text{
+    @include text($H520, 400, $text_color_white);
+    transform: rotate(270deg);
+    text-transform: uppercase;
+    padding-left: 150px;
+    position: absolute;
+top: 0;
+left: -15%;
+}
+&__title{
+@include text($H700, 400, $text_color_white);
+text-transform: uppercase;
+margin-bottom: 39px;
+text-align: right;
+width: 70% ;
+}
+&__subtitle{
+    @include text($H500, 400, $text_color_white);
+    margin-bottom: 83px;
+    text-align: right;
+    width: 70% ;
+}
+&__button{
+    display: block;
+    @include text($H300, 400, $text_color_white);
+    margin-bottom: 56px;
+    text-align: right;
+    width: 70% ;
+    transition: all .8s;
+}
+&__link{
+    display: block;
+    @include text($H200, 400, $text_color_white);
+    text-align: right;
+    width: 70% ;
+    transition: all .8s;
+
+}
+&__link:hover, &__button:hover {
+transform: scale(1.1);
+}
+&__arrow {
+    transition: all .8s;
+}
+&__arrow:hover {
+    transform: scale(1.2);
+    opacity: .3;
+}
+}

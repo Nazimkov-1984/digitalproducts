@@ -1,0 +1,24 @@
+@mixin text($size, $weight: 400, $color: $text-main-color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    @content;
+  }
+  @mixin flex(
+  $justify-content: flex-start,
+  $align-items: stretch,
+  $direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+}
+@mixin bg {
+  $background-size: cover;
+  $background-position: center, center;
+  $background-repeat: no-repeat;
+}
+  

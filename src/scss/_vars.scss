@@ -1,0 +1,31 @@
+//FONTS
+$Proxima_nova: 'Proxima Nova Rg', sans-serif;
+$Playfair_display: 'Playfair Display', sans-serif;
+
+//FONTS SIZE
+@function calcRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+  }
+  $H1000: calcRem(100px);
+  $H900: calcRem(80px);
+  $H850: calcRem(66px);
+  $H800: calcRem(60px);
+  $H700: calcRem(44px);
+  $H600: calcRem(36px);
+  $H550: calcRem(31px);
+  $H520: calcRem(26px);
+  $H500: calcRem(24px);
+  $H400: calcRem(22px);
+  $H300: calcRem(20px);
+  $H200: calcRem(18px);
+  $H100: calcRem(16px);
+  $H50: calcRem(14px);
+  $H20: calcRem(12px);
+  $H10: calcRem(4px);
+  
+  //COLORS 
+$text_color_white: #fff;
+$color_border_nav: #FFF;
+$color_hover_nav: #709e25;
+ 
