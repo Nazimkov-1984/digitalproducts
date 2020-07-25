@@ -70,10 +70,10 @@ padding-left: 20px;
 
 $styles : main-screen;
 .#{$styles} {
-    background: url('../img/header/bg.jpg');
-    @include bg;
+    background: url('../img/header/bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
     padding-bottom: 63px;
-    min-height: 100vh;
     @include flex (center, flex-end, column);
 
 &__text-wrapper {
@@ -85,7 +85,7 @@ $styles : main-screen;
     @include flex (center, center, column);
 }
 &__arrow-wrapper{
-    position: relative;
+position: relative;
 width: 100%;
 display: flex;
 justify-content: center;
@@ -94,30 +94,31 @@ justify-content: center;
     @include text($H520, 400, $text_color_white);
     transform: rotate(270deg);
     text-transform: uppercase;
-    padding-left: 150px;
     position: absolute;
-top: 0;
-left: -15%;
+    top:-150px;
+    left: 0;
 }
 
-:after, 
+&__vertikal_text:after, 
 .vertical-text:before {
     content: '';
     vertical-align: middle;
-    width: 100%;
+    width: 95%;
 	height: 2px;
-    background: $color_text_gold;
+    background: #FFF;
     border:  solid #FFF;
     border-width: 0px 0px;
     display: inline-block;
 }
 
-.vertical-text:after {
-    margin-right: -100%;
+&__vertikal_text:after {
+    margin-left: -200%;
 }
-.vertical-text:before {
-    margin-right: -250%;
+&__vertikal_text:before {
+    margin-left: 100%;
 }
+
+
 &__title{
 @include text($H700, 400, $text_color_white);
 text-transform: uppercase;
