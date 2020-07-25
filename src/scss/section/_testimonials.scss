@@ -1,0 +1,91 @@
+$styles : testimonials;
+.#{$styles} {
+    position: relative;
+    @include flex (center, center, column);
+background: url('../img/testimonials/bg.jpg') no-repeat;
+background-size: cover;
+    background-position: center center;
+
+    &__list{
+        @include flex (center, center, column); 
+        padding-top: 263px;
+        margin-bottom: 220px;
+        z-index: 3;
+    }
+    &__list__item{
+        @include flex (center, center, column); 
+        width: 50%;
+    }
+    &__list__item__rate{
+        margin-bottom: 45px;
+    }
+    &__list__item__text{
+        @include text($H200, 300, $text_color_white);
+        text-align: center;
+        line-height: 30px;  
+        margin-bottom: 36px;
+
+    }
+    &__list__item__author{
+        @include text($H500, 400, $text_color_white);
+        text-transform: uppercase;
+        padding-left: 30%;
+       
+    }
+    &__list__item__author:before{
+        content: '';
+        vertical-align: middle;
+        width: 30%;
+        height: 1px;
+        background: #FFF;
+        border: solid #FFF;
+        border-width: 0px 10px;
+        display: inline-block;
+    }
+    &__list__item__author:before{
+        margin-left: -100%;
+    }
+   
+    &__arrow-wrapper{
+        @include flex (center, center, row); 
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 5;
+    }
+    &__vertikal-text{
+        @include text($H520, 300, $text_color_white);
+        transform: rotate(270deg);
+        text-transform: uppercase;
+        position: absolute;
+        top:-70%;
+        left: 0;
+        z-index: 5;
+    }
+    &__arrow--left{
+        border: 1px solid $color_border_nav;
+        padding: 35px 35px; 
+    }
+    &__arrow--right{
+        padding: 35px 35px; 
+        border: 1px solid $color_border_nav;
+    }
+    &__arrow--left, &__arrow--right {
+        transition: all .8s;
+    }
+    &__arrow--left:hover, &__arrow--right:hover {
+        cursor: pointer;
+        opacity: .6;
+    }
+}
+.testimonials:after { //затемнение картинок
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 58, 4, 0.5);
+    z-index: 2;
+}

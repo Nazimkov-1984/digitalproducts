@@ -1,0 +1,84 @@
+$styles : product;
+.#{$styles} {
+    @include flex (center, center, column);
+   padding-top: 80px;
+   background-color:$color_bg_product;
+
+
+   &__title{
+    @include text($H550, 400, $text_color_title_prod);
+    margin-bottom: 70px;
+   }
+   &__carusel{
+    @include flex (space-around, center, row);
+    width: 100%;
+   }
+   &__carusel__item {
+       padding-top: 20px;
+    @include flex (center, center, column); 
+    border: 1px solid $color_hover_nav; 
+    margin-bottom: 50px;
+    background-color: white;
+   }
+   &__carusel__item__rate{  
+       margin-bottom: 20px;
+   }
+   &__carusel__item__title{
+    @include text($H200, 400, $text_color_title_card);  
+    margin-bottom: 62px;
+    text-transform: uppercase;
+    padding: 0px 10px 0px 10px;
+   }
+   &__carusel__item__img{
+       min-height: 243px;
+       margin-bottom: 76px;
+   }
+   &__carusel__item__footer{
+    @include flex (space-between, center, row);
+    width: 100%;  
+    background-color:$color_bg_price;
+   }
+   &__carusel__item__price{
+    @include text($H200, 400, $text_color_title_card);
+    padding-left: 30px;
+   }
+   &__carusel__item__button{
+    @include text($H300, 400, $text_color_white);
+    text-transform: uppercase;
+    background-color: $color_bg_button;
+    padding: 20px 40px 20px 20px;
+    transition: all .8s;
+   }
+   &__carusel__item__button:hover {
+       background-color: $color_bg_price;
+   }
+   &__carusel__item__button:after{
+       content: '';
+       vertical-align: middle;
+       width: 60%;
+       height: 1px;
+       background: #FFF;
+       border: solid #FFF;
+       border-width: 0px 0px;
+       display: inline-block;
+   }
+   &__carusel__item__button:after{
+       margin-right: -100%;
+   }
+  
+   &__arrow-wrapper{
+    @include flex (space-around, center, row);
+   }
+   &__arrow--left{
+       margin-right: 58px;
+       transition: all .8s;
+   }
+   &__arrow--right{
+    transition: all .8s;
+}
+
+   &__arrow--right:hover, &__arrow--left:hover {
+       cursor: pointer;
+       opacity: .6;
+   }
+}

@@ -1,0 +1,97 @@
+$styles : about;
+.#{$styles} {
+    @include flex (center, center, column);
+   padding-top: 80px ;
+   padding-bottom: 40px ;
+    
+    &__logo-wrapper{
+        @include flex (center, center, row);
+        margin-bottom: 115px;
+    }
+    &__tabs{
+        @include flex (center, center, row);  
+        margin-bottom: 78px;
+    }
+    &__tabs__item{
+        border-bottom: 4px solid $color_border_tab-d;
+        padding-bottom: 20px;
+        padding-right: 100px;
+        transition: all .8s;
+    }
+    &__tabs__item--active{
+        border-color: $color_border_tab-a;
+    }
+    &__tabs__item:hover{
+        cursor: pointer;
+        color: $text_color_tab;
+    }
+    &__cards{
+        @include flex (center, center, column);  
+    }
+    &__cards__item{
+        @include flex (space-evenly, center, row);     
+    }
+    &__cards__item__text-wrapper{@include flex (center, flex-start, column); 
+        flex-basis: 30%;
+    }
+    &__cards__item__title{
+        @include text($H500, 400, $text_color_black);
+        margin-bottom:50px ;
+    }
+    &__cards__item__text--top, &__cards__item__text--middle, &__cards__item__text--bottom{
+        @include text($H200, 300, $text_color_tab);  
+    }
+    &__cards__item__text--top, &__cards__item__text--middle {
+        margin-bottom: 66px;
+    }
+    &__cards__item__img-wrapper{
+        @include flex (center, center, column); 
+        flex-basis: 40%; 
+    }
+    &__cards__item__img-top{
+        background: url('../img/about/1.jpg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        min-height: 300px;
+        margin-bottom: 30px;
+
+    }
+    &__cards__item__img-bottom{
+        background: url('../img/about/2.jpg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        min-height: 300px;
+    }
+    &__cards__item__img-top--21{
+        background: url('../img/about/11.jpg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        min-height: 300px;
+        margin-bottom: 30px;
+    }
+    &__cards__item__img-bottom--22{
+        background: url('../img/about/22.jpg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        min-height: 300px;
+    }
+    &__cards__item__img-top--31{
+        background: url('../img/about/33.jpg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        min-height: 300px;
+        margin-bottom: 30px;
+    }
+    &__cards__item__img-bottom--32{
+        background: url('../img/about/44.jpg') no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        min-height: 300px;
+    }
+}

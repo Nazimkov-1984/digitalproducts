@@ -127,7 +127,7 @@ text-align: right;
 width: 70% ;
 }
 &__subtitle{
-    @include text($H500, 400, $text_color_white);
+    @include text($H500, 300, $text_color_white);
     margin-bottom: 83px;
     text-align: right;
     width: 70% ;
@@ -147,7 +147,7 @@ width: 70% ;
 }
 &__link{
     display: block;
-    @include text($H200, 400, $text_color_white);
+    @include text($H200, 300, $text_color_white);
     text-align: right;
     width: 70% ;
     transition: all .8s;

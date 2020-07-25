@@ -1,0 +1,37 @@
+$styles : asked;
+.#{$styles} {
+    @include flex (center, center, column);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    &__title{
+        @include text($H550, 400, $text_color_title_prod);
+        margin-bottom: 45px;
+        text-transform: uppercase;
+    }
+    &__accord{
+        @include flex (center, flex-start, column); 
+        width: 50%; 
+    }
+    &__accord__item{
+        border-top: 1px solid $color_border_accord;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        width: 100%
+    }
+    &__accord__item:hover {
+        cursor: pointer;
+    }
+    &__accord__item:last-child{
+        border-bottom: 1px solid $color_border_accord;
+    }
+    &__accord__item__title{
+        @include text($H200, 300, $color_title_accord);  
+    }
+    &__accord__item__text{
+        @include text($H200, 300, $color_text_accord);  
+        line-height: 50px;
+        padding-left: 50px;
+    }
+
+
+}

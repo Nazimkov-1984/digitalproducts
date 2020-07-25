@@ -1,0 +1,107 @@
+$styles : footer;
+.#{$styles} {
+    @include flex (center, center, column);
+    padding-top: 175px;
+    padding-bottom: 60px;
+
+
+    &__title{
+        @include text($H800, 400, $color_title_footer);
+        margin-bottom: 64px;
+    }
+    &__title:before,
+    &__title:after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+        width: 100%;
+        height: 3px;
+        background: #6E774A;
+    
+        
+        border: solid #FFF;
+        border-width: 0 10px;
+    }
+    &__title:before {
+        /* смещаем левую линию влево отрицательным отступом, равным 100% ширины
+        ** благодаря этому линия встает слева от текста
+        */
+        margin-left: -100%;
+    }
+    &__title:after {
+        /* смещаем правую линию вправо отрицательным отступом, равным 100% ширины
+        ** благодаря этому линия встает справа от текста
+        */
+        margin-right: -100%;
+    }
+    &__row-wrapper{
+        width: 100%;
+        @include flex (space-around, flex-start, row);
+       margin-bottom: 28px;   
+    }
+    &__row__items{
+        @include flex (center, center, column);
+
+    }
+    &__left-link li,    &__right-link li  {
+        margin-bottom: 28px;
+    }
+    &__left-link li:last-child , &__right-link li:last-child  {
+        margin-bottom: 0px;
+    }
+    &__left-link__items, &__right-link__items {
+        display: block;
+        @include text($H50, 300, $color_title_footer);
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__social-link {
+        @include flex (center, center, row);
+        margin-bottom: 40px;
+    }
+    &__social-link li {
+        margin-right: 60px;
+    }
+    &__social-link li:last-child {
+        margin-right: 0px;
+    }
+    &__social-link__item {
+
+    }
+
+   &__social-link__item--link {
+       width: 20px;
+       height: 20px;
+   }
+
+    &__title__form{
+        @include text($H200, 400, $color_title_footer);
+        text-transform: uppercase;
+        margin-bottom: 33px;
+    }
+    &__form {
+        @include flex (center, center, row); 
+        border: 1px solid $color_title_footer;
+        margin-bottom: 64px ;
+    }
+    &__form__input{
+        padding: 20px 20px;
+        border: none;
+    }
+    &__form__input::-webkit-input-placeholder { color: #6E774A; }
+
+    &__form__button{
+       padding:  20px 20px;
+       border-left: none;
+       background-color: white;
+       border: none;
+    }
+    &__form__button:hover {
+        cursor: pointer;
+    }
+    &__text{
+        @include text($H20, 300, $color_title_footer);  
+        text-transform: uppercase; 
+    }
+}
