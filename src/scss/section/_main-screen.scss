@@ -99,6 +99,25 @@ justify-content: center;
 top: 0;
 left: -15%;
 }
+
+:after, 
+.vertical-text:before {
+    content: '';
+    vertical-align: middle;
+    width: 100%;
+	height: 2px;
+    background: $color_text_gold;
+    border:  solid #FFF;
+    border-width: 0px 0px;
+    display: inline-block;
+}
+
+.vertical-text:after {
+    margin-right: -100%;
+}
+.vertical-text:before {
+    margin-right: -250%;
+}
 &__title{
 @include text($H700, 400, $text_color_white);
 text-transform: uppercase;
@@ -113,12 +132,17 @@ width: 70% ;
     width: 70% ;
 }
 &__button{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     @include text($H300, 400, $text_color_white);
     margin-bottom: 56px;
     text-align: right;
     width: 70% ;
     transition: all .8s;
+}
+&__button__img{
+    padding-left: 20px;
 }
 &__link{
     display: block;
