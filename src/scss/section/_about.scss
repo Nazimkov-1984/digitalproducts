@@ -8,7 +8,7 @@ $styles : about;
         @include flex (center, center, row);
         margin-bottom: 115px;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 375px),(max-width: 768px) {
         &__logo{
            width: 100%;
     }
@@ -23,7 +23,7 @@ $styles : about;
         padding-right: 100px;
         transition: all .8s;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 375px),(max-width: 768px) {
         &__tabs__item{
             padding-right: 20px;
     }
@@ -41,7 +41,7 @@ $styles : about;
     &__cards__item{
         @include flex (space-evenly, center, row);     
     }
-    @media (max-width: 375px) {
+    @media (max-width: 375px),(max-width: 768px) {
         &__cards__item{
         flex-direction: column;
         padding-left: 10px;
@@ -55,7 +55,7 @@ $styles : about;
         @include text($H500, 400, $text_color_black);
         margin-bottom:50px ;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 375px),(max-width: 768px) {
         &__cards__item__title{
        text-align: center;
         }
@@ -70,7 +70,7 @@ $styles : about;
         @include flex (center, center, column); 
         flex-basis: 40%; 
     }
-    @media (max-width: 375px) {
+    @media (max-width: 375px),(max-width: 768px) {
         &__cards__item__img-wrapper{
         width: 100%;   
         }

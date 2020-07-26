@@ -31,7 +31,7 @@ background-size: cover;
         text-transform: uppercase;
         padding-left: 30%;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 375px),(max-width: 768px) {
         &__list__item__author{
             padding-left: 60%;
     }
@@ -67,7 +67,7 @@ background-size: cover;
         left: 0;
         z-index: 5;
     }
-    @media (max-width: 375px) {
+    @media (max-width: 375px),(max-width: 768px) {
         &__vertikal-text{
           display: none;
     }

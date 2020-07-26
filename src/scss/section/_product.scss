@@ -27,7 +27,7 @@ $styles : product;
     background-color: white;
     margin-right: 20px;
    }
-   @media (max-width: 375px) {
+   @media (max-width: 375px),(max-width: 768px) {
     &__carusel__item{
      margin-right: 0px;
      min-height: 100vh;
@@ -47,7 +47,7 @@ $styles : product;
        min-height: 243px;
        margin-bottom: 76px;
    }
-   @media (max-width: 375px) {
+   @media (max-width: 375px),(max-width: 768px) {
     &__carusel__item__img{
        width: 100%;
        height: 200px;
@@ -58,7 +58,7 @@ $styles : product;
     width: 100%;  
     background-color:$color_bg_price;
    }
-   @media (max-width: 375px) {
+   @media (max-width: 375px),(max-width: 768px) {
     &__carusel__item__footer{
        flex-direction: column;
 }
@@ -67,7 +67,7 @@ $styles : product;
     @include text($H200, 400, $text_color_title_card);
     padding-left: 30px;
    }
-   @media (max-width: 375px) {
+   @media (max-width: 375px),(max-width: 768px) {
     &__carusel__item__price{
         padding-left: 0px;
 }
