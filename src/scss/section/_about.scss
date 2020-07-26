@@ -8,6 +8,11 @@ $styles : about;
         @include flex (center, center, row);
         margin-bottom: 115px;
     }
+    @media (max-width: 375px) {
+        &__logo{
+           width: 100%;
+    }
+    }
     &__tabs{
         @include flex (center, center, row);  
         margin-bottom: 78px;
@@ -17,6 +22,11 @@ $styles : about;
         padding-bottom: 20px;
         padding-right: 100px;
         transition: all .8s;
+    }
+    @media (max-width: 375px) {
+        &__tabs__item{
+            padding-right: 20px;
+    }
     }
     &__tabs__item--active{
         border-color: $color_border_tab-a;
@@ -31,12 +41,24 @@ $styles : about;
     &__cards__item{
         @include flex (space-evenly, center, row);     
     }
+    @media (max-width: 375px) {
+        &__cards__item{
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;   
+        }
+    }
     &__cards__item__text-wrapper{@include flex (center, flex-start, column); 
         flex-basis: 30%;
     }
     &__cards__item__title{
         @include text($H500, 400, $text_color_black);
         margin-bottom:50px ;
+    }
+    @media (max-width: 375px) {
+        &__cards__item__title{
+       text-align: center;
+        }
     }
     &__cards__item__text--top, &__cards__item__text--middle, &__cards__item__text--bottom{
         @include text($H200, 300, $text_color_tab);  
@@ -47,6 +69,11 @@ $styles : about;
     &__cards__item__img-wrapper{
         @include flex (center, center, column); 
         flex-basis: 40%; 
+    }
+    @media (max-width: 375px) {
+        &__cards__item__img-wrapper{
+        width: 100%;   
+        }
     }
     &__cards__item__img-top{
         background: url('../img/about/1.jpg') no-repeat;

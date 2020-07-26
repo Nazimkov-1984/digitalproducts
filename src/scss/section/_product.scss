@@ -27,6 +27,13 @@ $styles : product;
     background-color: white;
     margin-right: 20px;
    }
+   @media (max-width: 375px) {
+    &__carusel__item{
+     margin-right: 0px;
+     min-height: 100vh;
+     justify-content: space-between;
+}
+}
    &__carusel__item__rate{  
        margin-bottom: 20px;
    }
@@ -40,15 +47,31 @@ $styles : product;
        min-height: 243px;
        margin-bottom: 76px;
    }
+   @media (max-width: 375px) {
+    &__carusel__item__img{
+       width: 100%;
+       height: 200px;
+}
+}
    &__carusel__item__footer{
     @include flex (space-between, center, row);
     width: 100%;  
     background-color:$color_bg_price;
    }
+   @media (max-width: 375px) {
+    &__carusel__item__footer{
+       flex-direction: column;
+}
+}
    &__carusel__item__price{
     @include text($H200, 400, $text_color_title_card);
     padding-left: 30px;
    }
+   @media (max-width: 375px) {
+    &__carusel__item__price{
+        padding-left: 0px;
+}
+}
    &__carusel__item__button{
     @include text($H300, 400, $text_color_white);
     text-transform: uppercase;

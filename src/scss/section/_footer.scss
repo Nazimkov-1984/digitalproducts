@@ -8,6 +8,7 @@ $styles : footer;
     &__title{
         @include text($H800, 400, $color_title_footer);
         margin-bottom: 64px;
+        text-align: center;
     }
     &__title:before,
     &__title:after {

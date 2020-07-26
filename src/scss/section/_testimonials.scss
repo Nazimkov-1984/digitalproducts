@@ -30,7 +30,11 @@ background-size: cover;
         @include text($H500, 400, $text_color_white);
         text-transform: uppercase;
         padding-left: 30%;
-       
+    }
+    @media (max-width: 375px) {
+        &__list__item__author{
+            padding-left: 60%;
+    }
     }
     &__list__item__author:before{
         content: '';
@@ -62,6 +66,11 @@ background-size: cover;
         top:-70%;
         left: 0;
         z-index: 5;
+    }
+    @media (max-width: 375px) {
+        &__vertikal-text{
+          display: none;
+    }
     }
     &__arrow--left{
         border: 1px solid $color_border_nav;
