@@ -75,7 +75,7 @@ const link = document.querySelectorAll ('.header__bar__item'),
             }
         });
     }
-//slider
+//slider testimonials
 const sliders = document.querySelectorAll('.testimonials__list__item');
 const prev = document.querySelector('.testimonials__arrow--left');
 const next = document.querySelector('.testimonials__arrow--right');
@@ -106,3 +106,42 @@ showSlide(slideIndex);
         });
         // end slider
 
+
+let position = 0;
+const slidesToShow = 3;
+const  slidesToScroll = 1;
+
+const container = document.querySelector('.product__carusel__container'),
+        track = document.querySelector('.product__carusel'),
+        items =document.querySelectorAll('.product__carusel__item'),
+        itemsCount = items.length,
+        btnPrev = document.querySelector('.product__button__left'), 
+        btnNext = document.querySelector('.product__button__right'), 
+        itemWidth = (container.clientWidth) / slidesToShow,
+        movePosition = slidesToScroll * itemWidth;
+
+ 
+items.forEach((item) => {
+    item.style.minWidth = `${itemWidth}px`;
+});
+const setPosition = () => {
+    track.style.transform = `translateX(${position}px)`;
+};
+const checkBtns = () => {
+btnPrev.disabled = position === 0;
+btnNext.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
+};
+
+btnPrev.addEventListener('click',() => {
+    const itemsLeft = Math.abs(position) / itemWidth;
+    position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
+    setPosition();  
+    checkBtns();  
+});
+btnNext.addEventListener('click',() => {
+    const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
+    position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
+    setPosition ();
+    checkBtns();
+});
+checkBtns();

@@ -74,12 +74,12 @@ $styles : main-screen;
     background-size: cover;
     background-position: center center;
     padding-bottom: 63px;
-    @include flex (center, flex-end, column);
+    @include flex (flex-start, flex-end, column);
+    min-height:100vh;
 
 &__text-wrapper {
     @include flex (center, center, row);
-    padding-top: 312px;
-    padding-bottom: 255px;
+    padding-top: 20%; 
 }
 &____main-text-wrap {
     @include flex (center, center, column);

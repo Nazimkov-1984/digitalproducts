@@ -9,16 +9,23 @@ $styles : product;
     @include text($H550, 400, $text_color_title_prod);
     margin-bottom: 70px;
    }
+   &__carusel__container{
+       overflow: hidden;
+       width: 100%;
+       padding-left: 10px;
+        padding-right: 10px;
+   }
    &__carusel{
-    @include flex (space-around, center, row);
-    width: 100%;
+    @include flex (center, center, row);
+    
    }
    &__carusel__item {
-       padding-top: 20px;
+    padding-top: 20px;
     @include flex (center, center, column); 
     border: 1px solid $color_hover_nav; 
     margin-bottom: 50px;
     background-color: white;
+    margin-right: 20px;
    }
    &__carusel__item__rate{  
        margin-bottom: 20px;
@@ -69,8 +76,10 @@ $styles : product;
    &__arrow-wrapper{
     @include flex (space-around, center, row);
    }
-   &__arrow--left{
+   &__button__left {
        margin-right: 58px;
+   }
+   &__arrow--left{
        transition: all .8s;
    }
    &__arrow--right{
