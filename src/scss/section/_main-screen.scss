@@ -93,7 +93,7 @@ $styles : main-screen;
 }
 @media (max-width: 375px),(max-width: 768px) {
     &__text-wrapper{
-       margin-bottom: 30px;;
+       margin-bottom: 60px;
 }
 }
 &____main-text-wrap {
@@ -180,5 +180,15 @@ transform: scale(1.1);
 &__arrow:hover {
     transform: scale(1.2);
     opacity: .3;
+}
+}
+@media (max-width: 375px),(max-width: 768px) {
+    .header  {
+        justify-content: center;
+}
+}
+@media (max-width: 375px),(max-width: 768px) {
+    .main-screen  {
+        justify-content: space-between;
 }
 }
